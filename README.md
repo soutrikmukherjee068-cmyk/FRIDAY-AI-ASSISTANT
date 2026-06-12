@@ -4,14 +4,14 @@
 
 <p align="center">
   <b>🤖 Your Intelligent Personal Desktop AI — Powered by Google Gemini</b><br/>
-  Voice-controlled · Real-time · 50+ Tools · Hindi + English
+  Voice-controlled · Real-time · 60+ Tools · Bengali + English
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python" />
   <img src="https://img.shields.io/badge/Google%20Gemini-2.5%20Flash-orange?style=flat-square&logo=google" />
   <img src="https://img.shields.io/badge/LiveKit-Realtime-green?style=flat-square" />
-  <img src="https://img.shields.io/badge/Groq-LLaMA%203-red?style=flat-square" />
+  <img src="https://img.shields.io/badge/Language-Bengali-red?style=flat-square" />
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" />
 </p>
 
@@ -19,9 +19,9 @@
 
 ## 🌟 What is Friday?
 
-**Friday (Friday AI Assistant)** is a powerful voice-first AI desktop assistant built on **Google Gemini 2.5 Flash Realtime** and the **LiveKit Agents framework**. Inspired by Tony Stark's iconic AI companion from Iron Man, Friday understands both **Hindi and English**, controls your entire PC, automates complex tasks, and feels like having a real assistant by your side — 24/7.
+**Friday** is a powerful voice-first AI desktop assistant built on **Google Gemini 2.5 Flash Native Audio** and the **LiveKit Agents framework**. Inspired by Tony Stark's iconic AI companion from Iron Man, Friday speaks natural **Bengali (চলিত ভাষা)** mixed with English — just like everyday conversation. She controls your entire PC, automates complex tasks, and feels like having a real assistant by your side — 24/7.
 
-> 💬 *"Ready whenever you are, Boss."* — Friday is always listening.
+> 💬 *"হ্যাঁ Boss… Friday এখানে আছি।"* — Friday is always listening.
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Category | Capabilities |
 |----------|-------------|
-| 🎙️ **Voice** | Real-time Hindi + English voice conversation via Gemini |
-| 🖥️ **Desktop Control** | Open apps, manage windows, scroll, type, click |
+| 🎙️ **Voice** | Real-time Bengali + English voice conversation via Gemini Native Audio |
+| 🖥️ **Desktop Control** | Open apps, manage windows, scroll, type, click via OCR |
 | 🌐 **Web & Search** | DuckDuckGo, Wikipedia, live weather, top news |
-| 📱 **WhatsApp** | Send messages & media via desktop automation |
-| 🎵 **Media** | YouTube playback, Spotify control (play/pause/next) |
-| 📄 **Documents** | Read/query PDFs, Word docs, create Excel files |
-| 🤖 **AI Image Gen** | Generate AI images via Pollinations.ai (free, no key!) |
-| 💻 **Code Assistant** | Generate & run code via Groq AI in VS Code |
+| 📱 **WhatsApp** | Send text messages & media via desktop automation |
+| 🎵 **Media** | YouTube playback, Spotify control (play/pause/next/prev) |
+| 📄 **Documents** | Read & query PDFs, Word docs, create & edit Excel files |
+| 🤖 **AI Image Gen** | Generate AI images via Pollinations.ai (free, no key needed!) |
+| 💻 **Code Assistant** | Generate & run code via Groq AI directly in VS Code |
 | 🔔 **Reminders** | Smart reminder system with voice alerts |
-| 📸 **Screen Vision** | Screenshot analysis with Gemini Vision |
-| 🧠 **Code Fixer** | Automatically fix code errors |
-| 🔒 **System Power** | Shutdown, restart, lock your PC |
-| 📷 **Camera** | Live camera analysis |
-| 🎛️ **Volume/Brightness** | Voice-controlled system settings |
-| 📁 **File Management** | Search, open, convert files (PDF↔Word↔Excel) |
-| 🛡️ **Virus Scan** | Quick system virus scan |
+| 📸 **Screen Vision** | Screenshot + live screen analysis with Gemini Vision |
+| 🧠 **Code Fixer** | Automatically detect and fix code errors |
+| 🔒 **System Power** | Shutdown, restart, lock your PC by voice |
+| 📷 **Camera** | Live camera feed analysis |
+| 🎛️ **Volume/Brightness** | Voice-controlled system audio and display settings |
+| 📁 **File Management** | Search, open, convert files (PDF ↔ Word ↔ Excel ↔ Image) |
+| 🛡️ **Virus Scan** | Quick system security scan via Windows Defender |
 
 ---
 
@@ -53,8 +53,8 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/soutrikmukherjee068-cmyk/MJ-AI-ASSISTANT.git
-cd MJ-AI-ASSISTANT
+git clone https://github.com/soutrikmukherjee068-cmyk/FRIDAY-AI-ASSISTANT.git
+cd FRIDAY-AI-ASSISTANT
 ```
 
 ### 2. Set Up Python Environment
@@ -68,26 +68,29 @@ pip install -r requirements.txt
 
 ### 3. Configure Your API Keys
 
-Create a `.env` file in the root directory (copy from the template below):
+Create a `.env` file in the root directory:
 
 ```env
 # ✅ REQUIRED
 GEMINI_API_KEY=your_google_ai_studio_api_key_here
 
-# 🎙️ Voice settings
+# 🎙️ Voice & language settings
 GEMINI_VOICE=Kore
-LAN=Hindi
-FRIDAY_VARIANT=Humanized
+LAN=Bengali
+MJ_VARIANT=Humanized
 USER_NAME=Boss
 
 # 📧 Email (optional)
 GMAIL_USER=your_email@gmail.com
 GMAIL_PASSWORD=your_app_password_here
 
-# 🤖 Code generation (optional — needed for code gen & PDF Q&A)
+# 🎵 YouTube (optional — for direct video search)
+YOUTUBE_API_KEY=your_youtube_data_api_key_here
+
+# 🤖 Code generation & PDF Q&A (optional)
 GROQ_API_KEY=your_groq_api_key_here
 
-# 🔴 LiveKit (optional — needed for cloud deployment)
+# 📡 LiveKit (required for cloud/production deployment)
 LIVEKIT_URL=wss://your-project.livekit.cloud
 LIVEKIT_API_KEY=your_livekit_api_key
 LIVEKIT_API_SECRET=your_livekit_api_secret
@@ -97,6 +100,7 @@ LIVEKIT_API_SECRET=your_livekit_api_secret
 > - **Gemini** → [aistudio.google.com](https://aistudio.google.com)
 > - **Groq** → [console.groq.com](https://console.groq.com)
 > - **LiveKit** → [livekit.io](https://livekit.io)
+> - **YouTube Data API** → [console.cloud.google.com](https://console.cloud.google.com)
 
 ### 4. Run Friday
 
@@ -104,7 +108,7 @@ LIVEKIT_API_SECRET=your_livekit_api_secret
 # Simple launch (console mode)
 python run_agent.py console
 
-# Or directly with LiveKit
+# Or directly
 python agent.py console
 ```
 
@@ -113,15 +117,14 @@ python agent.py console
 ## 🗂️ Project Structure
 
 ```
-Friday-AI-ASSISTANT/
+FRIDAY-AI-ASSISTANT/
 │
 ├── agent.py              # 🧠 Main agent — LiveKit + Gemini setup
 ├── prompts_mj.py         # 📝 Friday's personality & system prompts
 ├── gemini_voice.py       # 🎙️ Gemini TTS voice helper
 ├── run_agent.py          # 🚀 Easy launch script
-├── tools.py              # 🔧 Core tools (legacy/monolithic)
 │
-├── Tools/                # 🧰 Modular tool collection
+├── Tools/                # 🧰 Modular tool collection (60+ tools)
 │   ├── camera_analysis.py
 │   ├── code_generator.py
 │   ├── code_handler.py
@@ -155,9 +158,9 @@ Friday-AI-ASSISTANT/
 │   └── youtube_videos.py
 │
 ├── requirements.txt      # 📦 Python dependencies
-├── .env                  # 🔒 Your secrets (NOT committed)
+├── .env                  # 🔒 Your secrets (NOT committed to git)
 ├── .gitignore            # 🚫 Ignores .env, .venv, __pycache__
-└── memory.json           # 🧠 Persistent memory (NOT committed)
+└── memory.json           # 🧠 Persistent conversation memory (NOT committed)
 ```
 
 ---
@@ -165,21 +168,62 @@ Friday-AI-ASSISTANT/
 ## 🧠 Architecture
 
 ```
-User Voice
-    │
-    ▼
-LiveKit Room (WebRTC)
-    │
-    ▼
-AgentSession ──► UltimateAdvancedNova (Agent)
-    │                    │
-    │               Gemini 2.5 Flash Realtime LLM
-    │                    │
-    └──────────► 50+ Function Tools
-                  (system, web, media, docs, code...)
+User speaks (Bengali / English)
+        │
+        ▼
+  LiveKit Room (WebRTC)
+        │
+        ▼
+  AgentSession (min_endpointing_delay=0.4s)
+        │
+        ▼
+  UltimateAdvancedNova Agent
+        │
+        ├──► Gemini 2.5 Flash Native Audio (LLM + Voice)
+        │         │
+        │    Friday's Personality Prompt
+        │    (Bengali · Colloquial · Warm · Confident)
+        │
+        └──► 60+ Function Tools
+              ├── System & Desktop
+              ├── Web & Search
+              ├── Media (YouTube, Spotify)
+              ├── Communication (WhatsApp, Email)
+              ├── Documents & Files
+              ├── Code (Generate, Fix, Run)
+              ├── Vision (Camera, Screen)
+              └── Reminders & Automation
 ```
 
-Friday uses **LiveKit's Agents framework** for real-time audio streaming, **Google Gemini 2.5 Flash Native Audio Preview** as the reasoning + voice backbone, and a rich ecosystem of **Python tools** for executing desktop tasks.
+---
+
+## ⚡ Performance Optimizations
+
+Recent updates significantly reduced response latency:
+
+| Optimization | What Changed | Gain |
+|---|---|---|
+| **Removed redundant tool docs** | `AGENT_INSTRUCTION_FOR_TOOLS` removed from system prompt — LLM already receives tool schemas directly | ~1–2s faster |
+| **Trimmed chat history** | Only last 15 messages sent to model per session (full history still saved locally) | ~0.5–1s faster |
+| **Faster VAD** | `min_endpointing_delay=0.4s` — Friday responds 400ms after you stop talking (was ~800ms) | ~0.4s faster |
+| **Non-blocking media open** | YouTube/browser opens in background — Friday replies instantly without waiting for browser to load | ~5–10s faster |
+
+---
+
+## 💬 Example Voice Commands
+
+```
+"Friday, Rahul ke WhatsApp e message pathao — kal dekha hobe"
+"Google e search karo AI news"
+"System volume 60% kore dao"
+"Screen er screenshot nao"
+"Python e calculator banao ar VS Code e type kore dao"
+"Spotify te Arijit Singh er gaan chalao"
+"Delhi te weather kemon?"
+"Excel e students er ekta table banao"
+"PDF upload karo ar summary dao"
+"Screen e ki dekhachhe?"
+```
 
 ---
 
@@ -188,16 +232,19 @@ Friday uses **LiveKit's Agents framework** for real-time audio streaming, **Goog
 | Package | Purpose |
 |---------|---------|
 | `livekit-agents` | Real-time agent framework |
-| `livekit-plugins-google` | Gemini Realtime model integration |
+| `livekit-plugins-google` | Gemini Native Audio model integration |
+| `livekit-plugins-noise-cancellation` | Background noise removal (BVC) |
+| `livekit-plugins-silero` | Voice activity detection |
 | `google-genai` | Google AI Studio SDK |
-| `aiohttp` | Async HTTP for APIs |
+| `aiohttp` | Async HTTP for external APIs |
 | `pyautogui` | Desktop GUI automation |
 | `pygetwindow` | Window management |
-| `groq` | LLaMA 3 via Groq API (code gen, PDF Q&A) |
+| `groq` | LLaMA 3 via Groq (code gen, PDF Q&A) |
 | `PyPDF2` | PDF text extraction |
 | `feedparser` | RSS news feeds |
-| `pillow` | Image processing |
 | `openpyxl` | Excel file handling |
+| `pytesseract` | OCR — click by text on screen |
+| `mss` | Fast screen capture |
 
 ---
 
@@ -205,36 +252,19 @@ Friday uses **LiveKit's Agents framework** for real-time audio streaming, **Goog
 
 - ✅ **No hardcoded secrets** — all API keys loaded from `.env`
 - ✅ **`.env` is gitignored** — your credentials are never committed
-- ✅ **`memory.json` is gitignored** — your personal data stays local
-
-
----
-
-## 📋 Example Voice Commands
-
-```
-"Friday, WhatsApp mein Rahul ko message bhej do — kal milte hain"
-"Google par search karo AI news"
-"Mera system volume 60% kar do"
-"Screen ka screenshot le lo"
-"Python mein calculator banao aur VS Code mein type kar do"
-"Spotify par Arijit Singh ka gaana chalao"
-"Weather kya hai Delhi mein?"
-"Excel mein ek table banao students ki"
-"PDF upload karo aur mujhe summary do"
-"Screen pe kya dikh raha hai?"
-```
+- ✅ **`memory.json` is gitignored** — your personal conversation data stays local only
+- ✅ **All tools run locally** — no third-party data collection
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, open an issue first.
+Pull requests are welcome! For major changes, please open an issue first to discuss.
 
 1. Fork the repo
 2. Create your feature branch: `git checkout -b feature/AmazingTool`
-3. Commit: `git commit -m "Add AmazingTool"`
-4. Push: `git push origin feature/AmazingTool`
+3. Commit your changes: `git commit -m "Add AmazingTool"`
+4. Push to the branch: `git push origin feature/AmazingTool`
 5. Open a Pull Request
 
 ---
