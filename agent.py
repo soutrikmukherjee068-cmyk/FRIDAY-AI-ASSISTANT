@@ -245,7 +245,7 @@ class UltimateAdvancedNova(Agent):
         return RealtimeModel(
             model=os.getenv(
                 "LIVEKIT_GEMINI_MODEL",
-                "models/gemini-2.0-flash-exp",
+                "models/gemini-2.0-flash",
             ),
             voice=os.getenv("GEMINI_VOICE", "Kore"),
             temperature=float(os.getenv("GEMINI_TEMPERATURE", "0.9")),
