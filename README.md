@@ -206,7 +206,7 @@ Friday uses **LiveKit's Agents framework** for real-time audio streaming, **Goog
 - ✅ **No hardcoded secrets** — all API keys loaded from `.env`
 - ✅ **`.env` is gitignored** — your credentials are never committed
 - ✅ **`memory.json` is gitignored** — your personal data stays local
-- ✅ **`Tools/` folder is gitignored** — internal tools stay private
+
 
 ---
 
