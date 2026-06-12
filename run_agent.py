@@ -16,7 +16,7 @@ def ensure_env_file():
             "GEMINI_API_KEY=PASTE_YOUR_GOOGLE_AI_STUDIO_API_KEY_HERE\n"
             "GEMINI_VOICE=Kore\n"
             "LAN=Hindi\n"
-            "MJ_VARIANT=Humanized\n"
+            "FRIDAY_VARIANT=Humanized\n"
             "USER_NAME=Boss\n",
             encoding="utf-8"
         )
@@ -48,7 +48,7 @@ def main():
 
     mode = sys.argv[1] if len(sys.argv) > 1 else "console"
 
-    print(f"🚀 Launching agent.py {mode} ...")
+    print(f"🚀 Launching Friday (agent.py {mode}) ...")
     subprocess.run([sys.executable, "agent.py", mode])
 
 

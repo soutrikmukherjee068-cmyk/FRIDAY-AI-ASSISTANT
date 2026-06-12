@@ -225,7 +225,7 @@ class UltimateAdvancedNova(Agent):
             llm=self._init_llm(),
         )
 
-        print(f"✅ MJ initialized with {len(tools)} tools")
+        print(f"✅ Friday initialized with {len(tools)} tools")
 
     def _init_llm(self):
         api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
@@ -311,7 +311,7 @@ class UltimateAdvancedNova(Agent):
 # ENTRYPOINT
 # =========================
 async def entrypoint(ctx: agents.JobContext):
-    print("🚀 Starting MJ...")
+    print("🚀 Starting Friday...")
 
     agent = UltimateAdvancedNova()
     session = AgentSession()
@@ -330,12 +330,12 @@ async def entrypoint(ctx: agents.JobContext):
     await ctx.connect()
     await session.generate_reply(instructions=SESSION_INSTRUCTION)
 
-    print("🔥 MJ is LIVE & READY")
+    print("🔥 Friday is LIVE & READY")
 
     try:
         await asyncio.Future()
     except asyncio.CancelledError:
-        print("🛑 MJ stopped")
+        print("🛑 Friday stopped")
 
 # =========================
 # RUNNER

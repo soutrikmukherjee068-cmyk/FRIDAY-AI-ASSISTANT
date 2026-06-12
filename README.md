@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://img.shields.io/badge/MJ-AI%20ASSISTANT-blueviolet?style=for-the-badge&logo=google&logoColor=white" alt="MJ AI Assistant"/>
+  <img src="https://img.shields.io/badge/FRIDAY-AI%20ASSISTANT-6c47ff?style=for-the-badge&logo=google&logoColor=white" alt="Friday AI Assistant"/>
 </h1>
 
 <p align="center">
@@ -17,11 +17,11 @@
 
 ---
 
-## 🌟 What is MJ?
+## 🌟 What is Friday?
 
-**MJ (MJ AI Assistant)** is a powerful voice-first AI desktop assistant built on **Google Gemini 2.5 Flash Realtime** and the **LiveKit Agents framework**. It understands both **Hindi and English**, controls your entire PC, automates complex tasks, and feels like having a real assistant by your side — 24/7.
+**Friday (Friday AI Assistant)** is a powerful voice-first AI desktop assistant built on **Google Gemini 2.5 Flash Realtime** and the **LiveKit Agents framework**. Inspired by Tony Stark's iconic AI companion from Iron Man, Friday understands both **Hindi and English**, controls your entire PC, automates complex tasks, and feels like having a real assistant by your side — 24/7.
 
-> 💬 *"Boss, kya karna hai aaj?"* — MJ is always ready.
+> 💬 *"Ready whenever you are, Boss."* — Friday is always listening.
 
 ---
 
@@ -77,7 +77,7 @@ GEMINI_API_KEY=your_google_ai_studio_api_key_here
 # 🎙️ Voice settings
 GEMINI_VOICE=Kore
 LAN=Hindi
-MJ_VARIANT=Humanized
+FRIDAY_VARIANT=Humanized
 USER_NAME=Boss
 
 # 📧 Email (optional)
@@ -98,7 +98,7 @@ LIVEKIT_API_SECRET=your_livekit_api_secret
 > - **Groq** → [console.groq.com](https://console.groq.com)
 > - **LiveKit** → [livekit.io](https://livekit.io)
 
-### 4. Run MJ
+### 4. Run Friday
 
 ```bash
 # Simple launch (console mode)
@@ -113,10 +113,10 @@ python agent.py console
 ## 🗂️ Project Structure
 
 ```
-MJ-AI-ASSISTANT/
+Friday-AI-ASSISTANT/
 │
 ├── agent.py              # 🧠 Main agent — LiveKit + Gemini setup
-├── prompts_mj.py         # 📝 MJ's personality & system prompts
+├── prompts_mj.py         # 📝 Friday's personality & system prompts
 ├── gemini_voice.py       # 🎙️ Gemini TTS voice helper
 ├── run_agent.py          # 🚀 Easy launch script
 ├── tools.py              # 🔧 Core tools (legacy/monolithic)
@@ -179,7 +179,7 @@ AgentSession ──► UltimateAdvancedNova (Agent)
                   (system, web, media, docs, code...)
 ```
 
-MJ uses **LiveKit's Agents framework** for real-time audio streaming, **Google Gemini 2.5 Flash Native Audio Preview** as the reasoning + voice backbone, and a rich ecosystem of **Python tools** for executing desktop tasks.
+Friday uses **LiveKit's Agents framework** for real-time audio streaming, **Google Gemini 2.5 Flash Native Audio Preview** as the reasoning + voice backbone, and a rich ecosystem of **Python tools** for executing desktop tasks.
 
 ---
 
@@ -213,7 +213,7 @@ MJ uses **LiveKit's Agents framework** for real-time audio streaming, **Google G
 ## 📋 Example Voice Commands
 
 ```
-"MJ, WhatsApp mein Rahul ko message bhej do — kal milte hain"
+"Friday, WhatsApp mein Rahul ko message bhej do — kal milte hain"
 "Google par search karo AI news"
 "Mera system volume 60% kar do"
 "Screen ka screenshot le lo"
