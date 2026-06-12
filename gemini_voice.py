@@ -20,7 +20,7 @@ def save_wave(filename, pcm, channels=1, rate=24000, sample_width=2):
 def speak_with_gemini(text, output_file="reply.wav"):
     response = client.models.generate_content(
         model="gemini-3.1-flash-tts-preview",
-        contents=f"Say in a natural, warm, friendly Hindi female voice: {text}",
+        contents=f"Say in a natural, warm, friendly Bengali female voice: {text}",
         config=types.GenerateContentConfig(
             response_modalities=["AUDIO"],
             speech_config=types.SpeechConfig(
@@ -40,4 +40,4 @@ def speak_with_gemini(text, output_file="reply.wav"):
 
 
 if __name__ == "__main__":
-    speak_with_gemini("Hello, main aapki AI assistant hoon. Aapka swagat hai.")
+    speak_with_gemini("হ্যাঁ Boss, আমি Friday। বলো কী করতে হবে।")

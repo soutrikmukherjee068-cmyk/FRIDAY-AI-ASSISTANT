@@ -225,7 +225,7 @@ class UltimateAdvancedNova(Agent):
             llm=self._init_llm(),
         )
 
-        print(f"✅ MJ initialized with {len(tools)} tools")
+        print(f"✅ Friday initialized with {len(tools)} tools")
 
     def _init_llm(self):
         api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
@@ -253,10 +253,12 @@ class UltimateAdvancedNova(Agent):
         )
 
     def _build_instructions(self):
+        # AGENT_INSTRUCTION_FOR_TOOLS removed — tool schemas are already passed
+        # directly to the model via the tools list, so the text description is
+        # redundant and only adds ~1500+ tokens of context overhead every turn.
         return "\n".join(
             [
                 AGENT_INSTRUCTION,
-                AGENT_INSTRUCTION_FOR_TOOLS,
                 "You have access to ALL system, voice, automation and reminder tools.",
                 "Use tools aggressively when required.",
             ]
@@ -311,10 +313,15 @@ class UltimateAdvancedNova(Agent):
 # ENTRYPOINT
 # =========================
 async def entrypoint(ctx: agents.JobContext):
-    print("🚀 Starting MJ...")
+    print("🚀 Starting Friday...")
 
     agent = UltimateAdvancedNova()
-    session = AgentSession()
+
+    # Fix #5: reduce end-of-speech silence wait from default ~800ms to 400ms
+    # so Friday responds faster after the user stops talking.
+    session = AgentSession(
+        min_endpointing_delay=0.4,
+    )
 
     await session.start(
         room=ctx.room,
@@ -330,12 +337,12 @@ async def entrypoint(ctx: agents.JobContext):
     await ctx.connect()
     await session.generate_reply(instructions=SESSION_INSTRUCTION)
 
-    print("🔥 MJ is LIVE & READY")
+    print("🔥 Friday is LIVE & READY")
 
     try:
         await asyncio.Future()
     except asyncio.CancelledError:
-        print("🛑 MJ stopped")
+        print("🛑 Friday stopped")
 
 # =========================
 # RUNNER
